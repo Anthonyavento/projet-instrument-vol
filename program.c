@@ -2,26 +2,31 @@
 
 int main()
 {
+int vitesse = 200;
+int altitude = 1000;
+int horizon = 0;
+int directionnel = 54;
+
  printf("| SPD |                             LNAV                              | A /THR |\n");
  printf("────────────────────────────────────────────────────────────────────────────────\n");
  printf("                                      0                                         \n");
- printf("                                      .                                         \n");
- printf("                           10.       ───       .10                              \n");
- printf("| 360 |                            ───────                            | 32 400 |\n");
- printf("|     |              20.            ───            .20                |        |\n");
- printf("| 340 |                      10  ───────────  10                      |        |\n");
- printf("|     |                             ──|──                             | 32 200 |\n");
- printf("| 320 |                            ───|───                            |        |\n");
+ printf("                            10        .        10                                \n");
+ printf("                             .       ───        .                               \n");
+ printf("| %3d |                20          ───────          20                |  %4d  |\n" ,vitesse + 60, altitude + 1500 );
+ printf("|     |                 .            ───            .                 |        |\n");
+ printf("| %3d |                     %2d  ───────────  %2d                       |  %4d  |\n" ,vitesse + 40, horizon + 10, horizon + 10, altitude + 1000 );
+ printf("|     |                             ──|──                             |        |\n");
+ printf("| %3d |                            ───|───                            |  %4d  |\n" ,vitesse + 20, altitude + 500 );
  printf("|=====|                             ──|──                             |========|\n");
- printf("| 312 | ────       ───────| ──────────|────────── |───────       ──── | 32 020 |\n");
+ printf("| %3d | ────       ───────| ──────────|────────── |───────       ──── |  %4d  |\n" ,vitesse, altitude );
  printf("|=====|                   |         ──|──         |                   |========|\n");
- printf("| 280 |                            ───|───                            |        |\n");
- printf("|     |                             ──|──                             | 31 800 |\n");
- printf("| 260 |                      10  ───────────  10                      |        |\n");
+ printf("| %3d |                            ───|───                            |  %4d  |\n" ,vitesse - 20, altitude + 500 );
+ printf("|     |                             ──|──                             |        |\n");
+ printf("| %3d |                     %2d  ───────────  %2d                     |  %4d  |\n" ,vitesse - 40, horizon - 10, horizon - 10, altitude + 1000);
  printf("|     |                          ≡─────────≡                          |        |\n");
- printf("| 240 |                      20  ───────────  20                      | 31 600 |\n");
+ printf("| %3d |                     %2d  ───────────  %2d                     |  %4d  |\n" ,vitesse - 60, horizon - 20, horizon - 20, altitude + 1500 );
  printf("                     ____________________________________                       \n");
- printf("                    |        |        |         |        |                      \n");
- printf("                    |       261      262       263       |                      \n");
+ printf("                    |     |     |     |     |     |     |                      \n");
+ printf("                    |    %3d   %3d   %3d   %3d   %3d    |                      \n" ,directionnel - 2, directionnel - 1, directionnel, directionnel + 1, directionnel + 2);
  return 0;
  }
